@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  			xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
+  								http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  	<modelVersion>4.0.0</modelVersion>
+
+  	<groupId>com.codape.winmall</groupId>
+  	<artifactId>winmall-commons</artifactId>
+  	<version>0.0.1-SNAPSHOT</version>
+
+  	<properties>
+    	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    	<maven.compiler.source>1.8</maven.compiler.source>
+    	<maven.compiler.target>1.8</maven.compiler.target>
+    	<spring-boot.version>2.1.0.RELEASE</spring-boot.version>
+    	<mysql-connector.version>6.0.6</mysql-connector.version>
+    	<shiro-spring.version>1.4.0</shiro-spring.version>
+  	</properties>
+
+  	<dependencies>
+  		<!-- 配置Spring Boot依赖关系[BEGIN] -->
+  		<dependency>
+  			<groupId>org.springframework.boot</groupId>
+  			<artifactId>spring-boot-starter-web</artifactId>
+  			<version>${spring-boot.version}</version>
+  		</dependency>
+  		<!-- 配置Spring Boot依赖关系[END] -->
+  		
+  		<!-- 配置Spring Data JPA和Spring Boot结合的依赖关系[BEGIN] -->
+  		<dependency>
+  			<groupId>org.springframework.boot</groupId>
+  			<artifactId>spring-boot-starter-data-jpa</artifactId>
+  			<version>${spring-boot.version}</version>
+  		</dependency>
+  		<!-- 配置Spring Data JPA和Spring Boot结合的依赖关系[END] -->
+  		
+  		<!-- 配置MySQL数据库连接依赖关系[BEGIN] -->
+  		<dependency>
+  			<groupId>mysql</groupId>
+  			<artifactId>mysql-connector-java</artifactId>
+  			<version>${mysql-connector.version}</version>
+  		</dependency>
+  		<!-- 配置MySQL数据库连接依赖关系[END] -->
+  		
+  		<!-- 配置Thymeleaf和Spring Boot结合的依赖关系[BEGIN] -->
+		<dependency>
+		    <groupId>org.springframework.boot</groupId>
+		    <artifactId>spring-boot-starter-thymeleaf</artifactId>
+		    <version>${spring-boot.version}</version>
+		</dependency>
+  		<!-- 配置Thymeleaf和Spring Boot结合的依赖关系[END] -->
+  		
+  		<!-- 配置Shiro和Spring结合的依赖关系[BEGIN] -->
+		<dependency>
+		    <groupId>org.apache.shiro</groupId>
+		    <artifactId>shiro-spring</artifactId>
+		    <version>${shiro-spring.version}</version>
+		</dependency>
+  		<!-- 配置Shiro和Spring结合的依赖关系[END] -->
+  		
+  		<!-- 配置Spring Boot热部署依赖关系[BEGIN] -->
+  		<dependency>
+  			<groupId>org.springframework.boot</groupId>
+  			<artifactId>spring-boot-devtools</artifactId>
+  			<version>${spring-boot.version}</version>
+  		</dependency>
+  		<!-- 配置Spring Boot热部署依赖关系[END] -->
+  	</dependencies>
+
+  	<build>
+    	<pluginManagement>
+      		<plugins>
+        		<plugin>
+          			<artifactId>maven-clean-plugin</artifactId>
+          			<version>3.0.0</version>
+        		</plugin>
+        		<plugin>
+          			<artifactId>maven-resources-plugin</artifactId>
+          			<version>3.0.2</version>
+        		</plugin>
+        		<plugin>
+          			<artifactId>maven-compiler-plugin</artifactId>
+          			<version>3.7.0</version>
+        		</plugin>
+        		<plugin>
+          			<artifactId>maven-surefire-plugin</artifactId>
+          			<version>2.20.1</version>
+        		</plugin>
+        		<plugin>
+          			<artifactId>maven-jar-plugin</artifactId>
+          			<version>3.0.2</version>
+        		</plugin>
+        		<plugin>
+          			<artifactId>maven-install-plugin</artifactId>
+          			<version>2.5.2</version>
+        		</plugin>
+        		<plugin>
+          			<artifactId>maven-deploy-plugin</artifactId>
+          			<version>2.8.2</version>
+        		</plugin>
+      		</plugins>
+    	</pluginManagement>
+  	</build>
+</project>

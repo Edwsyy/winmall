@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  			xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
+  								http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  	<modelVersion>4.0.0</modelVersion>
+
+  	<groupId>com.codape.winmall</groupId>
+  	<artifactId>winmall-admin</artifactId>
+  	<version>0.0.1-SNAPSHOT</version>
+  	<packaging>war</packaging>
+
+  	<properties>
+    	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    	<maven.compiler.source>1.8</maven.compiler.source>
+    	<maven.compiler.target>1.8</maven.compiler.target>
+    	<winmall.version>0.0.1-SNAPSHOT</winmall.version>
+  	</properties>
+
+  	<dependencies>
+  		<!-- 配置WinMall项目依赖关系[BEGIN] -->
+  		<dependency>
+  			<groupId>com.codape.winmall</groupId>
+  			<artifactId>winmall-commons</artifactId>
+  			<version>${winmall.version}</version>
+  		</dependency>
+  		<!-- 配置WinMall项目依赖关系[END] -->
+  		
+  		
+  		<!-- 配置Servlet依赖关系[BEGIN] -->
+		<dependency>
+		    <groupId>javax.servlet</groupId>
+		    <artifactId>javax.servlet-api</artifactId>
+		    <version>3.1.0</version>
+		    <scope>provided</scope>
+		</dependency>
+  		<!-- 配置Servlet依赖关系[END] -->
+  	</dependencies>
+
+  	<build>
+    	<finalName>winmall-admin</finalName>
+    	<pluginManagement>
+      		<plugins>
+        		<plugin>
+          			<artifactId>maven-clean-plugin</artifactId>
+          			<version>3.0.0</version>
+        		</plugin>
+        		<plugin>
+          			<artifactId>maven-resources-plugin</artifactId>
+          			<version>3.0.2</version>
+        		</plugin>
+        		<plugin>
+          			<artifactId>maven-compiler-plugin</artifactId>
+          			<version>3.7.0</version>
+        		</plugin>
+        		<plugin>
+          			<artifactId>maven-surefire-plugin</artifactId>
+          			<version>2.20.1</version>
+        		</plugin>
+        		<plugin>
+          			<artifactId>maven-war-plugin</artifactId>
+          			<version>3.2.0</version>
+        		</plugin>
+        		<plugin>
+          			<artifactId>maven-install-plugin</artifactId>
+          			<version>2.5.2</version>
+        		</plugin>
+        		<plugin>
+          			<artifactId>maven-deploy-plugin</artifactId>
+          			<version>2.8.2</version>
+        		</plugin>
+      		</plugins>
+    	</pluginManagement>
+  	</build>
+</project>
